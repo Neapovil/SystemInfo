@@ -1,0 +1,20 @@
+plugins {
+  id 'java-library'
+}
+
+version = "1.18.1"
+group = 'com.github.neapovil.systeminfo'
+compileJava.options.encoding = 'UTF-8'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+
+repositories {
+  maven { url 'https://papermc.io/repo/repository/maven-public/' }
+  mavenCentral()
+}
+
+dependencies {
+  compileOnly group: 'io.papermc.paper', name: 'paper-api', version: '1.18.1-R0.1-SNAPSHOT'
+  compileOnly group: 'dev.jorel', name: 'commandapi-core', version: '7.0.0'
+  compileOnly group: 'com.github.oshi', name: 'oshi-core', version: '5.8.5'
+}
